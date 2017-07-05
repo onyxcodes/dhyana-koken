@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+  <koken:meta />
+  <koken:title />
+  <koken:settings />
+</head>
+<body>
+<header>
+  <h1>{{ site.title }}</h1> 
+  <nav>
+    <koken:navigation />
+  </nav>
+</header>
+<koken:load>
+  <koken:breadcrumbs />
+  <h1>
+    <koken:if data="archive.type" equals="date">
+      All content from {{ archive.title }}
+    </koken:if>
+    <koken:if data="archive.type" equals="tag">
+      All content assigned the {{ archive.type.singular }} #{{ archive.title }}
+    </koken:if> 
+    <koken:if data="archive.type" equals="category">
+      All content assigned in the {{ archive.type.singular }} {{ archive.title }}
+    </koken:if>
+  </h1>
+    <ol class="grid">
+    <koken:loop>
+      <li>
+        <koken:link>
+          <koken:img />
+        </koken:link>
+        <koken:link>
+          {{ content.title | content.filename }} 
+        </koken:link>
+        {{ content.caption paragraphs="true" }}
+      </li>
+    </koken:loop>
+  </ol>
+<koken:else>
+  <koken:note>
+    No images or videos found 
+  </koken:note>
+</koken:load>
+<footer>
+  {{ site.copyright }} 
+</footer>
+</body>
+</html>

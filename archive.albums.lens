@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <koken:meta />
+  <koken:title />
+  <koken:settings />
+</head>
+<body>
+<header>
+  <h1>{{ site.title }}</h1> 
+  <nav>
+    <koken:navigation />
+  </nav>
+</header>
+<koken:load>
+  <koken:breadcrumbs />
+  <h1>
+    <koken:if data="archive.type" equals="date">
+      All albums from {{ archive.title }}
+    </koken:if>
+    <koken:if data="archive.type" equals="tag">
+      All albums assigned the {{ archive.type.singular }} #{{ archive.title }}
+    </koken:if> 
+    <koken:if data="archive.type" equals="category">
+      All albums assigned in the {{ archive.type.singular }} {{ archive.title }}
+    </koken:if>
+  </h1>
+    <ol class="grid">
+    <koken:loop>
+      <li>
+        <h2>
+          <koken:link>
+            {{ album.title }}
+          </koken:link>
+        </h2> 
+        <koken:link>
+          <koken:img size="3:2" />
+        </koken:link>
+      </li>
+    </koken:loop>
+  </ol>
+<koken:else>
+  <koken:note>
+    No public albums found 
+  </koken:note>
+</koken:load>
+<footer>
+  {{ site.copyright }} 
+</footer>
+</body>
+</html>

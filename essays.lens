@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <koken:meta />
+  <koken:title />
+  <koken:settings />
+</head>
+<body>
+<header>
+  <h1>{{ site.title }}</h1> 
+  <nav>
+    <koken:navigation />
+  </nav>
+</header>
+<koken:load>
+  <ol class="list">
+    <koken:loop>
+      <li>
+        <article>
+          <h2> 
+            <koken:link>
+              {{ essay.title }} 
+            </koken:link>
+          </h2>
+          {{ essay.content paragraphs="true" }} 
+        </article>
+      </li>
+    </koken:loop>
+  </ol>
+<koken:else>
+  <koken:note>
+    No published essays found 
+  </koken:note>
+</koken:load>
+<footer>
+  {{ site.copyright }} 
+</footer>
+</body>
+</html>

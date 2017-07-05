@@ -1,0 +1,35 @@
+</main>
+
+<footer>
+    <div class="wrap row hide-for-small-only">
+        <div class="column">
+            <h4>About</h4>
+            <hr>
+            <p>{{ site.description }}</p>
+        </div>
+        <div class="column">
+            <h4>Site map</h4>
+            <hr>
+            <koken:navigation />
+        </div>
+        <div class="column"></div>    
+    </div>
+
+    <div class="wrap show-for-small-only">
+        <koken:if empty="{{ profile.google_plus }}">
+            <koken:else>
+                <a class="grey-text text-lighten-4 right" href="{{ profile.google_plus }}" target="blank"><i class="fi-social-google-plus"></i></a>
+        </koken:if> 
+        <koken:if empty="{{ profile.twitter }}">
+            <koken:else>
+            <a class="grey-text text-lighten-4 right" href="{{ profile.twitter }}" target="blank"><i class="fi-social-twitter"></i></a>
+        </koken:if>
+        <koken:if empty="{{ profile.facebook }}">
+            <koken:else>
+                <a class="grey-text text-lighten-4 right" href="{{ profile.facebook }}" target="blank"><i class="fi-social-facebook"></i></a>
+        </koken:if>
+    </div> 
+</footer>
+
+</body>
+</html>

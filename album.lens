@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <koken:meta />
+  <koken:title />
+  <koken:settings />
+</head>
+<body>
+<header>
+  <h1>{{ site.title }}</h1> 
+  <nav>
+    <koken:navigation />
+  </nav>
+</header>
+<koken:load>
+  <h2>{{ album.title }}</h2>
+  {{ album.description paragraphs="true" }} 
+  <koken:tags>
+    <p>
+      <strong>{{ labels.tag.plural }}:</strong> 
+      <koken:loop separator=" ">
+        <koken:link>
+          #{{ tag.title }} 
+        </koken:link>
+      </koken:loop>
+    </p>
+  </koken:tags>
+  <koken:categories>
+    <p>
+      <strong>{{ labels.category.plural }}:</strong> 
+      <koken:loop separator=", ">
+        <koken:link>
+          {{ category.title }} 
+        </koken:link>
+      </koken:loop>
+    </p>
+  </koken:categories>
+  <p>
+    <koken:link to="archive">
+      <koken:time />
+    </koken:link>
+  </p>
+  <ol class="grid">
+    <koken:loop>
+      <li>
+        <koken:link>
+          <koken:img />
+        </koken:link>
+      </li>
+    </koken:loop>
+  </ol>
+<koken:else>
+  <koken:note>
+    No album data found 
+  </koken:note>
+</koken:load>
+<footer>
+  {{ site.copyright }} 
+</footer>
+</body>
+</html>

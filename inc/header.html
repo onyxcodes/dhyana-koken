@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Publishes Author, Description, and Keywords from Settings > Site Publishing plus content data -->
+	<koken:meta />
+
+	<!-- Publishes Page Title from Settings > Site Publishing plus content titles -->
+	<koken:title />
+    <!-- Loading theme's settings css from css/settings.css.lens -->
+    <koken:settings />
+    
+    <koken:asset file="css/foundation.css" />
+    <koken:asset file="css/foundation-icons.css" /> 
+    <koken:asset file="css/theme.css" />
+    
+
+    <koken:asset file="pillar.js" common="true" />    
+    
+</head>
+
+<body style="height: 100%">
+    <header style="z-index: 2">
+        <nav class="hover-underline-menu hide-for-small-only" data-menu-underline-from-center>
+            <koken:navigation class="menu align-center"/>
+        </nav>
+        <nav class="hover-underline-menu show-for-small-only" data-menu-underline-from-center>
+            <ul class="menu align-center">
+                <li><a href="#" class="fi-list" data-toggle="mobile-menu"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="off-canvas position-top" id="mobile-menu" data-off-canvas data-transition="push">
+            <!-- Your menu or Off-canvas content goes here -->
+            <koken:navigation class="vertical menu"/>
+    </div>
+
+    <main class="off-canvas-content" data-off-canvas-content>  
+    
+        

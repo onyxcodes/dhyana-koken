@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<koken:include file="inc/header.html" />
+<koken:asset file="css/index.css" />
+
+    <koken:load>
+        <koken:pulse id="slide" source="featured_albums" height="100%" crop="fill" />
+        <koken:else>
+            <koken:note>No data found</koken:note>
+            
+    </koken:load>
+</main>
+
+
+<koken:asset file="js/theme.js" />
+<koken:asset file="js/vendor/foundation.js"/>
+<script>
+    $(document).foundation();
+</script>
+</body>
+<html>
+
