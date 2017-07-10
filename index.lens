@@ -3,7 +3,7 @@
 <koken:asset file="css/index.css" />
 
     <koken:load>
-        <koken:pulse id="slide" source="featured_albums" height="100%" crop="fill" />
+        <koken:pulse id="slide" source="featured_albums" link_to="album" height="100%" crop="fill" />
         <koken:else>
             <koken:note>No data found</koken:note>
             
@@ -14,7 +14,10 @@
 <koken:asset file="js/theme.js" />
 <koken:asset file="js/vendor/foundation.js"/>
 <script>
-    $(document).foundation();
+    $(document).ready(function() {
+        $(document).foundation();
+        $(".k-nav-breadcrumbs").css("display", "none");
+    });
 </script>
 </body>
 <html>

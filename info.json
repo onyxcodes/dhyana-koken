@@ -1,10 +1,86 @@
 {
-  "name": "Dhyana",
-  "version": "1.0",
-  "description": "Minimal, zen theme built with Foundation framework",
-  "demo": "http://onyxganda.me",
-  "author": {
-    "name": "Onyx Ganda",
-    "link": "http://onyxganda.me"
-  }
+	"name": "Dhyana",
+	"version": "1.0",
+	"description": "Minimal, zen theme built with Foundation framework",
+	"demo": "http://onyxganda.me",
+	"author": {
+		"name": "Onyx Ganda",
+		"link": "http://onyxganda.me"
+	},
+	"navigation_groups": {
+		"footer": {
+			"label": "Footer",
+			"defaults": [
+				"front",
+				"albums",
+				"categories",
+				"tags",
+				"contents"
+			]
+		}
+	},
+	"settings": {
+		"Style": {
+			"icon": "style",
+			"settings": {
+				"accent": {
+					"label": "Accent color",
+					"type": "color",
+					"value": "#1779ba"
+				},
+				"title_font": {
+					"label": "Uppercase font",
+					"type": "boolean",
+					"values": {
+						"true": "small-caps",
+						"false": "normal"
+					},
+					"value": "small-caps",
+					"note": "This makes menu text in small caps",
+					"note_align": "left"
+				},
+				"theme_style": {
+					"label": "Theme",
+					"type": "select",
+					"options": [
+						{ "label":"Dark", "value": "#212121" },
+					  	{ "label":"Light", "value": "#FFFFFF" }
+					],
+					"value": "#212121",
+					"note": "Affects the background of header and footer"
+				},
+				"theme_text_style": {
+					"label": "Image align",
+					"type": "select",
+					"options": [
+						{ "label":"Dark", "value": "#212121" },
+					  	{ "label":"Light", "value": "#FFFFFF" }
+					],
+					"value": "#FFFFFF",
+					"note": "Affects the text color of header and footer"
+				},
+				"show_logo": {
+					"label": "Use logo",
+					"type": "boolean",
+					"value": true
+				},
+				"logo_src": {
+					"label": "Logo's source",
+					"type": "string",
+					"value": "storage/themes/dhyana-koken/logo.png",
+					"note": "Enter the url for your logo",
+					"note_align": "right",
+					"dependencies": {
+						"evaluate": "all",
+						"conditions": [
+							{
+								"option": "show_logo",
+								"equals": true
+						  	}
+						]
+					}
+				}
+			}
+		}
+	}
 }

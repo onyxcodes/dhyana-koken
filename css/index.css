@@ -24,3 +24,12 @@ main {
 #slide {
     height: 100%;
 }
+  
+.hover-underline-menu {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hover-underline-menu .menu a {
+    color: #fff;
+}
+
