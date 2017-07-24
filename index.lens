@@ -15,7 +15,6 @@
 <koken:asset file="js/vendor/foundation.js"/>
 <script>
     $(document).ready(function() {
-        $(document).foundation();
         $(".k-nav-breadcrumbs").css("display", "none");
     });
 </script>

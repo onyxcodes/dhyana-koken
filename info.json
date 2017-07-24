@@ -50,7 +50,7 @@
 					"note": "Affects the background of header and footer"
 				},
 				"theme_text_style": {
-					"label": "Image align",
+					"label": "Text color",
 					"type": "select",
 					"options": [
 						{ "label":"Dark", "value": "#212121" },

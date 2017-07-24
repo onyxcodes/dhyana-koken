@@ -2,6 +2,8 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
+    background-image: url("inc/memphis-colorful.png");
+    background-repeat: repeat;
 }
 
 
@@ -32,7 +34,6 @@ nav span a {
 
 nav span a:hover {
     color: $accent;
-    font-weight: bold;
 }
 
 nav a {
@@ -109,6 +110,8 @@ main {
 div.container {
     width: 80%;
     margin: auto;
+    background: #fefefe;
+    padding: 1.3rem 2rem .7rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -130,6 +133,11 @@ div.container {
     /* Responsive magic */
     max-width: 100%;
     height: auto;
+}
+
+.container figure {
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -210,4 +218,30 @@ a:hover, a:focus {
 .accordion-title {
     color: $accent;
 }
+.accordion-title span {
+    float: right;
+    margin-right: 24px;
+}
 
+/** Timeline.lens **/
+.events {
+    max-height: 450px;
+    display: flex;
+    flex-direction: horizontal;
+}
+
+.events .event {
+    flex: 1 0 auto;
+    margin: 0 25px;
+    max-height: 450px;
+    max-width: 450px;
+}
+
+.events .event img {
+    margin: 0 auto;
+    max-height: 320px;
+}
+
+.events .event .card-section {
+    overflow-y: auto;
+}

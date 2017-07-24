@@ -19,6 +19,7 @@ body, html {
 main {
     height: 100% !important; 
     padding: 0px 0px !important;
+    width: 100%;
 }
 
 #slide {
@@ -31,5 +32,36 @@ main {
 
 .hover-underline-menu .menu a {
     color: #fff;
+}
+
+.thumbbg {
+    z-index: -10;
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0;
+    left: 0;
+    filter: blur(7.5px);
+    transform: scale(1.1); 
+    background-color: grey;
+    background-blend-mode: multiply;
+}
+/*.thumbbg:after {
+    z-index: -5;
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}*/
+
+.center {
+    position: relative;
+    vertical-align: middle;
+    z-index: 999;
+    margin: auto auto;
+    max-width: 70%;
 }
 

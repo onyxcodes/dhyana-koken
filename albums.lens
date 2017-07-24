@@ -29,7 +29,6 @@
 
 <script>
     $(document).ready(function() {
-        $(document).foundation();
         $(function() {
             $('#kgrid').pillar({
                 items: '.kgrid_item'
