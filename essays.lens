@@ -1,17 +1,12 @@
 <koken:include file="inc/header.html" />
-<koken:load>
-	<div class="container">
-		<ul class="accordion" data-accordion>
+<div class="container">
+	<koken:load>
+	
+		<ul class="accordion" data-accordion data-allow-all-closed="true">
 			<koken:loop>
 				<li class="accordion-item" data-accordion-item>
 					<!-- Accordion tab title -->
-					<!--	<span class="accordion-title">
-							<a href="#">{{ essay.title }}</a>
-							<span>data</span>
-						</span>
-					-->
-					<!-- Accordion tab title -->
-    				<span href="#" class="accordion-title">{{ essay.title }}</span>
+    				<a href="#" class="accordion-title">{{ essay.title }}</a>
 
 					<!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
 					<div class="accordion-content" data-tab-content>
@@ -25,11 +20,17 @@
 			<koken:note>
 				No published essays found
 			</koken:note>
-</koken:load>
+	</koken:load>		
 </div>
+
+
 
 <koken:include file="inc/footer.html" />
 
 <!-- Scripts -->
-<koken:asset file="js/theme.js" />
 <koken:asset file="js/vendor/foundation.js" />
+<koken:asset file="js/theme.js" />
+
+<script>
+$(".accordion-item:first").addClass("is-active");
+</script>

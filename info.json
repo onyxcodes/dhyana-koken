@@ -41,21 +41,13 @@
 				},
 				"theme_style": {
 					"label": "Theme",
-					"type": "select",
-					"options": [
-						{ "label":"Dark", "value": "#212121" },
-					  	{ "label":"Light", "value": "#FFFFFF" }
-					],
+					"type": "color",
 					"value": "#212121",
 					"note": "Affects the background of header and footer"
 				},
 				"theme_text_style": {
 					"label": "Text color",
-					"type": "select",
-					"options": [
-						{ "label":"Dark", "value": "#212121" },
-					  	{ "label":"Light", "value": "#FFFFFF" }
-					],
+					"type": "color",
 					"value": "#FFFFFF",
 					"note": "Affects the text color of header and footer"
 				},

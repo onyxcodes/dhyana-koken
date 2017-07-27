@@ -6,7 +6,7 @@
 		<koken:loop>
 			<koken:event>
 				<koken:event_album>
-					<div data-date="{{ album.published_on }}" style="max-height: 500px" class="card">
+					<div data-vtdate="{{ album.published_on }}" style="max-height: 500px" class="card">
 						<div class="card-image">
 							<koken:img />
 							<span class="card-title">{{ album.title }}</span>
@@ -22,7 +22,7 @@
 					</div>
 				</koken:event_album>
 				<koken:event_album_update>
-					<div data-date="{{ album.modified_on }}">
+					<div data-vtdate="{{ album.modified_on }}">
 						<koken:loop>
 							<koken:img />
 						</koken:loop>
@@ -33,7 +33,7 @@
 					</div>
 				</koken:event_album_update>
 				<koken:event_content>
-					<div data-date="{{ content.published_on }}" class="card hoverable ">
+					<div data-vtdate="{{ content.published_on }}" class="card hoverable ">
 						<koken:if data="{{ content.file_type }}" equals="image">
 							<div class="card-image">
 								<koken:content_image>
@@ -58,7 +58,7 @@
 					</div>
 				</koken:event_content>
 				<koken:event_essay>
-					<div data-date="{{ essay.published_on }}" class="card hoverable">
+					<div data-vtdate="{{ essay.published_on }}" class="card hoverable">
 						<div class="card-image">
 							<koken:featured_image>
 								<koken:img />
@@ -83,9 +83,9 @@
 <koken:else>
 	<koken:note>
 		No timeline data found. 
-	</koken:note>	
+	</koken:note>
 </koken:load>
-</div>
+
 
 <koken:include file="inc/footer.html" />
 
