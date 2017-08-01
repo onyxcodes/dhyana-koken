@@ -6,25 +6,21 @@
 		<koken:loop>
 			<koken:event>
 				<koken:event_album>
-					<div data-vtdate="{{ album.published_on }}" style="max-height: 500px" class="card">
-						<div class="card-image">
-							<koken:img />
-							<span class="card-title">{{ album.title }}</span>
-						</div>
+					<div data-vtdate="{{ album.published_on }}" class="card event">
+						<koken:img size="3:2" />
 						<div class="card-section">
+							<span class="card-title">{{ album.title }}</span>
 							<p>
 								{{ album.summary }}
 							</p>
-						</div>
-						<div class="card-action">
 							<a href="{{ album.url }}">More</a>
 						</div>
 					</div>
 				</koken:event_album>
 				<koken:event_album_update>
-					<div data-vtdate="{{ album.modified_on }}">
+					<div data-vtdate="{{ album.modified_on }}" class="card event">
 						<koken:loop>
-							<koken:img />
+							<koken:img size="3:2" />
 						</koken:loop>
 						<h3>{{ album.title }} ({{ content.length }} new items)</h3>
 						<p>
@@ -33,23 +29,16 @@
 					</div>
 				</koken:event_album_update>
 				<koken:event_content>
-					<div data-vtdate="{{ content.published_on }}" class="card hoverable ">
-						<koken:if data="{{ content.file_type }}" equals="image">
-							<div class="card-image">
-								<koken:content_image>
-									<koken:link>
-										<koken:img />
-									</koken:link>
-								</koken:content_image>
-							</div>
-							<koken:else>
-								<div class="video-container">
-									<koken:content_video>
-										<koken:video />
-									</koken:content_video>
-								</div>
-						</koken:if>
-						<div class="card-content">
+					<div data-vtdate="{{ content.published_on }}" class="card event">
+						<koken:content_image>
+							<koken:link>
+								<koken:img size="3:2" />
+							</koken:link>
+						</koken:content_image>
+						<koken:content_video>
+							<koken:video />
+						</koken:content_video>
+						<div class="card-section">
 							<span class="card-title">{{ content.title | content.filename }}</span>
 							<p>
 								{{ content.caption }}
@@ -58,32 +47,26 @@
 					</div>
 				</koken:event_content>
 				<koken:event_essay>
-					<div data-vtdate="{{ essay.published_on }}" class="card hoverable">
-						<div class="card-image">
-							<koken:featured_image>
-								<koken:img />
-							</koken:featured_image>
-						</div>
-						<div class="card-content">
+					<div data-vtdate="{{ essay.published_on }}" class="card event">
+						<koken:featured_image>
+							<koken:img size="3:2" />
+						</koken:featured_image>
+						<div class="card-section">
 							<span class="card-title">{{ essay.title }}</span>
 							<p>
 								{{ essay.excerpt }}
 							</p>
-						</div>
-						<div class="card-action">
 							<a href="{{ essay.url }}">More</a>
 						</div>
-
 					</div>
 				</koken:event_essay>
 			</koken:event>
-			<!--</li>-->
 		</koken:loop>
 	</div>
-<koken:else>
-	<koken:note>
-		No timeline data found. 
-	</koken:note>
+	<koken:else>
+		<koken:note>
+			No timeline data found.
+		</koken:note>
 </koken:load>
 
 

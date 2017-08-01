@@ -39,11 +39,13 @@ nav span a:hover {
 nav a {
     font-variant: $title_font;
 }
+
 .logo-container {
     flex: 1 auto;
     height: 100%;
     margin: auto 0;
 }
+
 .logo {
     height: 45px;
     margin: auto 0;
@@ -57,15 +59,16 @@ nav a {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out;
 }
+
 .hover-underline-menu:hover {
     background: $theme_style;
 }
 
-.hover-underline-menu:hover .menu a{
+.hover-underline-menu:hover .menu a {
     color: $theme_text_style;
 }
 
-.hover-underline-menu .menu a{
+.hover-underline-menu .menu a {
     color: $theme_text_style;
     padding: 1.2rem 1.5rem;
 }
@@ -133,6 +136,7 @@ div.container {
     /* Responsive magic */
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
 .container figure {
@@ -164,7 +168,12 @@ footer .wrap.hide-for-small-only {
 
 footer .column {
     flex: 0 0 33.333333%;
+    flex-direction: column;
     padding: 1.5% 0px;
+}
+
+footer .menu.vertical {
+    flex-wrap: wrap;
 }
 
 footer .column hr {
@@ -181,13 +190,17 @@ footer .wrap.show-for-small-only {
 
 
 /** General elements styling **/
+
 a {
     color: $accent;
 }
+
 a.label {
     background: $accent;
 }
-a:hover, a:focus {
+
+a:hover,
+a:focus {
     color: $accent;
 }
 
@@ -196,20 +209,23 @@ a:hover, a:focus {
     position: relative;
 }
 
-.button:hover, .button:focus {
+.button:hover,
+.button:focus {
     background-color: $accent;
     font-weight: normal;
 }
+
 .button::after {
     content: "\A";
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
     width: 100%;
     height: 100%;
     border: 1px solid transparent;
 }
+
 .button:hover::after {
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -218,33 +234,117 @@ a:hover, a:focus {
     color: $accent;
 }
 
+
 /** Timeline.lens **/
-.events {
-    max-height: 450px;
-    display: flex;
-    flex-direction: horizontal;
-}
 
-.events .event {
-    flex: 1 0 auto;
-    margin: 0 25px;
-    max-height: 450px;
-    max-width: 450px;
-}
-
-.events .event img {
+#timeline {
+    width: 90%;
     margin: 0 auto;
-    max-height: 320px;
 }
 
-.events .event .card-section {
-    overflow-y: auto;
+
+/** Home page **/
+
+.expand-column-wrapper {
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
 }
 
-/** Content.lens **/
-.sidebar {
-    flex: 0.5 0 auto;
-    background: rgba(0, 0, 0, 0.3);
-    color: $theme_text_style;
+@media screen and (max-width: 768px) {
+    .expand-column-wrapper .column {
+        flex-direction: vertical;
+    }
 }
 
+.expand-column-wrapper .column {
+    padding: 1rem;
+    transition: all 0.5s ease-in-out;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.expand-column-wrapper .column:hover {
+    -webkit-flex-basis: 40%;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    background-color: grey;
+    background-blend-mode: multiply;
+}
+
+.column,
+.columns {
+    -webkit-flex: 1 1 0px;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    min-width: initial;
+    display: flex;
+    justify-content: center;
+}
+
+.expand-column-wrapper .column:hover .expand-column-content,
+.expand-column-wrapper .column:hover .expand-column-content a {
+    opacity: 1;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid $accent;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    /*animation-delay: 3s;*/
+}
+
+.expand-column-wrapper .column:hover .expand-column-content {
+    border: none;
+}
+
+.expand-column-wrapper .expand-column-content,
+.expand-column-wrapper .expand-column-content a {
+    color: #fefefe;
+    font-size: x-large;
+    font-variant: small-caps;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: $accent;
+    }
+}

@@ -1,26 +1,46 @@
 <!DOCTYPE html>
-  <head>
-    <koken:meta />
-    <koken:title />
-    <koken:settings />
-  </head>
-  <body>
-    <header>
-      <h1>{{ site.title }}</h1>
-      <nav>
-       <koken:navigation />
-      </nav>
-    </header>
-    <koken:load>
-      <h1>{{ page.title }}</h1>
-      {{ page.content }}
-    <koken:else>
-     <koken:note>
-       No page found
-      </koken:note>
-    </koken:load>
-    <footer>
-      {{ site.copyright }}
-    </footer>
-  </body>
-</html>
+<koken:include file="inc/header.html" />
+<style>
+button {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 0 1rem 0;
+	font-family: inherit;
+	padding: 0.85em 1em;
+	-webkit-appearance: none;
+	border: 1px solid transparent;
+	border-radius: 0;
+	transition: background-color 0.25s ease-out, color 0.25s ease-out;
+	font-size: 0.9rem;
+	line-height: 1;
+	text-align: center;
+	cursor: pointer;
+	background-color: #1779ba;
+	color: #fefefe;
+}
+</style>
+<koken:load>
+	<div class="container">
+		<article>
+			<h2>
+				<koken:link>
+					{{ page.title }}
+				</koken:link>
+			</h2>
+			<p>
+				<koken:time />
+			</p>
+			{{ page.content }}			
+		</article>		
+	</div>
+<koken:else>
+	<koken:note>
+		No published essay found
+	</koken:note>
+</koken:load>
+
+<koken:include file="inc/footer.html" />
+
+<!-- Scripts -->
+<koken:asset file="js/theme.js" />
+<koken:asset file="js/vendor/foundation.js" />

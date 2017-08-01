@@ -2,22 +2,45 @@
 <koken:include file="inc/header.html" />
 <koken:asset file="css/index.css" />
 
-    <koken:load>
-        <koken:pulse id="slide" source="featured_albums" link_to="album" height="100%" crop="fill" />
-        <koken:else>
-            <koken:note>No data found</koken:note>
-            
-    </koken:load>
+<koken:load limit="5">
+    
+    <div class="row expand-column-wrapper hide-for-small-only">
+        <koken:load source="albums">
+            <koken:loop>
+                <koken:background class="column">
+                    <p class="expand-column-content">
+                        <a href="{{ album.url }}">{{ album.title }}</a>
+                    </p>
+                </koken:background>
+            </koken:loop>
+        </koken:load>
+        <koken:load source="essays">
+            <koken:loop>
+                <koken:background class="column">
+                    <p class="expand-column-content">
+                        <a href="{{ essay.url }}">{{ essay.title }}</a>
+                    </p>
+                </koken:background>
+            </koken:loop>
+        </koken:load>
+    </div>
+    <div class="fs_slide show-for-small-only">
+        <koken:pulse link_to="lightbox" height="100%" crop="fill" />
+    </div>
+
+    <koken:else>
+        <koken:note>No data found</koken:note>
+
+</koken:load>
 </main>
 
 
 <koken:asset file="js/theme.js" />
-<koken:asset file="js/vendor/foundation.js"/>
+<koken:asset file="js/vendor/foundation.js" />
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $(".k-nav-breadcrumbs").css("display", "none");
     });
 </script>
 </body>
 <html>
-

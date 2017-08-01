@@ -31,16 +31,17 @@
 				<koken:time />
 			</koken:link>
 		 </p>
+	
+		<div id="kgrid">
+			<koken:loop>
+				<div class="kgrid_item">
+					<koken:link>
+						<koken:img preset="medium" lazy="true" />
+					</koken:link>
+				</div>
+			</koken:loop>
+		</div>
 	</div>
-	<div id="kgrid">
-		<koken:loop>
-        	<div class="kgrid_item">
-				<koken:link>
-					<koken:img preset="medium" lazy="true" />
-				</koken:link>
-        	</div>
-      	</koken:loop>
-    </div>
 	<koken:else>
   		<koken:note>
     		No album data found 

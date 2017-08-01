@@ -7,27 +7,29 @@ body {
     padding: 0;
     width: 100%;
 }
-body, html {
-  margin: 0;
-  overflow: hidden;
-  -webkit-transition: opacity 400ms;
-  -moz-transition: opacity 400ms;
-  transition: opacity 400ms;
-  height: 100%;
+
+body,
+html {
+    margin: 0;
+    -webkit-transition: opacity 400ms;
+    -moz-transition: opacity 400ms;
+    transition: opacity 400ms;
+    height: 100%;
 }
 
 main {
-    height: 100% !important; 
+    height: 100% !important;
     padding: 0px 0px !important;
     width: 100%;
 }
 
-#slide {
+.fs_slide {
     height: 100%;
+    margin: 0 0;
 }
-  
+
 .hover-underline-menu {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .hover-underline-menu .menu a {
