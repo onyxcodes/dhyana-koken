@@ -134,18 +134,18 @@ div.container {
 
 .kgrid_item img {
     /* Responsive magic */
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
 .container figure {
     width: 80%;
-    margin: 0 auto;
 }
 
 
-/** Footer styling **/
+/** Footer styling
+**/
 
 footer {
     background-color: $theme_style;
@@ -189,7 +189,8 @@ footer .wrap.show-for-small-only {
 }
 
 
-/** General elements styling **/
+/** General
+elements styling **/
 
 a {
     color: $accent;
@@ -252,8 +253,8 @@ a:focus {
 }
 
 @media screen and (max-width: 768px) {
-    .expand-column-wrapper .column {
-        flex-direction: vertical;
+    .expand-column-wrapper  {
+        flex-direction: column-reverse;
     }
 }
 
@@ -296,11 +297,13 @@ a:focus {
 .expand-column-wrapper .column:hover .expand-column-content a {
     opacity: 1;
     overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
+    /* Ensures the content is not
+revealed until the animation */
     border-right: .15em solid $accent;
     /* The typwriter cursor */
     white-space: nowrap;
-    /* Keeps the content on a single line */
+    /* Keeps
+the content on a single line */
     margin: 0 auto;
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;

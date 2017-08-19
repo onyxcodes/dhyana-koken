@@ -4,7 +4,7 @@
 
 <koken:load limit="5">
     
-    <div class="row expand-column-wrapper hide-for-small-only">
+    <div class="row expand-column-wrapper ">
         <koken:load source="albums">
             <koken:loop>
                 <koken:background class="column">
@@ -24,9 +24,9 @@
             </koken:loop>
         </koken:load>
     </div>
-    <div class="fs_slide show-for-small-only">
+   <!--<div class="fs_slide show-for-small-only">
         <koken:pulse link_to="lightbox" height="100%" crop="fill" />
-    </div>
+    </div>-->
 
     <koken:else>
         <koken:note>No data found</koken:note>
