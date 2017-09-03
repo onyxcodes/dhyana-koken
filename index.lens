@@ -2,9 +2,11 @@
 <koken:include file="inc/header.html" />
 <koken:asset file="css/index.css" />
 
-<koken:load limit="5">
+<!-- There's a bug when you have no featured_content (image or video) which doesn't allow to load
+    the featured albums and essays -->
+<koken:load source="featured_content" limit="5">
     
-    <div class="row expand-column-wrapper ">
+    <div class="row expand-column-wrapper">
         <koken:load source="albums">
             <koken:loop>
                 <koken:background class="column">
