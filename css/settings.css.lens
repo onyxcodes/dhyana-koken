@@ -40,6 +40,11 @@ nav a {
     font-variant: $title_font;
 }
 
+nav .mobile-title {
+    text-shadow: 1px 1px black;
+    color: white;
+}
+
 .logo-container {
     flex: 1 auto;
     height: 100%;
