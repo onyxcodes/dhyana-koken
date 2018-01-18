@@ -2,7 +2,6 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
-    background-image: url("inc/memphis-colorful.png");
     background-repeat: repeat;
 }
 
@@ -120,6 +119,7 @@ div.container {
     margin: auto;
     background: #fefefe;
     padding: 1.3rem 2rem .7rem;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -167,14 +167,15 @@ footer a:hover {
 }
 
 footer .wrap.hide-for-small-only {
-    height: 250px;
     display: flex;
+    margin: 1%;
 }
 
 footer .foot-column {
     flex: 0 0 33.333333%;
     flex-direction: column;
-    padding: 1.5%;
+    padding: 4%;
+    text-align: justify;
 }
 
 footer .menu.vertical {
