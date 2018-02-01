@@ -54,13 +54,6 @@
 					"value": "#FFFFFF",
 					"note": "Affects the text color of header and footer",
 					"note_align": "left"
-				},
-				"instagram": {
-					"label": "Instagram account",
-					"type": "string",
-					"value": "gandalfx_",
-					"note": "Enter you instagram username",
-					"note_align": "left"
 				}
 			}
 		},
