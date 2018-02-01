@@ -2,10 +2,10 @@
 	"name": "Dhyana",
 	"version": "1.0",
 	"description": "Minimal, zen theme built with Foundation framework",
-	"demo": "http://onyxganda.me",
+	"demo": "https://onyx.codes",
 	"author": {
-		"name": "Onyx Ganda",
-		"link": "http://onyxganda.me"
+		"name": "Onyx",
+		"link": "https://onyx.codes"
 	},
 	"navigation_groups": {
 		"footer": {
@@ -26,7 +26,9 @@
 				"accent": {
 					"label": "Accent color",
 					"type": "color",
-					"value": "#1779ba"
+					"value": "#1779ba",
+					"note": "Affects text and elements highlights",
+					"note_align": "left"
 				},
 				"title_font": {
 					"label": "Uppercase font",
@@ -36,40 +38,55 @@
 						"false": "normal"
 					},
 					"value": "small-caps",
-					"note": "This makes menu text in small caps",
+					"note": "Makes nav text in small caps",
 					"note_align": "left"
 				},
 				"theme_style": {
 					"label": "Theme",
 					"type": "color",
 					"value": "#212121",
-					"note": "Affects the background of header and footer"
+					"note": "Affects the background of header and footer",
+					"note_align": "left"
 				},
 				"theme_text_style": {
 					"label": "Text color",
 					"type": "color",
 					"value": "#FFFFFF",
-					"note": "Affects the text color of header and footer"
+					"note": "Affects the text color of header and footer",
+					"note_align": "left"
 				},
+				"instagram": {
+					"label": "Instagram account",
+					"type": "string",
+					"value": "gandalfx_",
+					"note": "Enter you instagram username",
+					"note_align": "left"
+				}
+			}
+		},
+		"Layout": {
+			"icon": "layout",
+			"settings": {
 				"show_logo": {
 					"label": "Use logo",
 					"type": "boolean",
 					"value": true,
-					"note": "Choose wether to show a logo rather than a title"
+					"note": "Choose wether to show a logo rather than a title",
+					"note_align": "left"
 				},
 				"logo_src": {
 					"label": "Logo's source",
 					"type": "string",
 					"value": "storage/themes/dhyana-koken/logo.png",
 					"note": "Enter the url for your logo",
-					"note_align": "right",
+					"note_align": "left",
 					"dependencies": {
 						"evaluate": "all",
 						"conditions": [
 							{
 								"option": "show_logo",
 								"equals": true
-						  	}
+							}
 						]
 					}
 				},
@@ -77,7 +94,8 @@
 					"label": "Instagram account",
 					"type": "string",
 					"value": "gandalfx_",
-					"note": "Enter you instagram username"
+					"note": "Enter you instagram username",
+					"note_align": "left"
 				}
 			}
 		}
