@@ -54,7 +54,8 @@
 				"show_logo": {
 					"label": "Use logo",
 					"type": "boolean",
-					"value": true
+					"value": true,
+					"note": "Choose wether to show a logo rather than a title"
 				},
 				"logo_src": {
 					"label": "Logo's source",
@@ -71,6 +72,12 @@
 						  	}
 						]
 					}
+				},
+				"instagram": {
+					"label": "Instagram account",
+					"type": "string",
+					"value": "gandalfx_",
+					"note": "Enter you instagram username"
 				}
 			}
 		}
