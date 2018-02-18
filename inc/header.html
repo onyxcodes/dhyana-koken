@@ -2,11 +2,20 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Publishes Author, Description, and Keywords from Settings > Site Publishing plus content data -->
-	<koken:meta />
+    <!-- Publishes Author, Description, and Keywords from Settings -->
+	<meta property="og:url" content="{{ page.url }}" />
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:image" content="{{ settings.cover_image }}" />
+    
+    <!-- Publishes cards markup for Twitter-->
+    <meta name="twitter:card" content="{{ site.description }}" />
+    <meta name="twitter:site" content="@{{ profile.twitter }}" />
+    <meta name="twitter:creator" content="@{{ profile.twitter }}" />
 
 	<!-- Publishes Page Title from Settings > Site Publishing plus content titles -->
     <koken:title />
+    
     
     <!-- Loading Foundation 6 css files-->
     <koken:asset file="css/foundation.css" />

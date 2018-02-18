@@ -82,12 +82,29 @@
 							}
 						]
 					}
+				}
+			}
+		},
+		"SEO & urls": {
+			"icon": "layout",
+			"settings": {
+				"cover_image": {
+					"label": "Cover image url",
+					"type": "string",
+					"value": "https://i.imgur.com/ckfh5jH.png"
 				},
 				"instagram": {
-					"label": "Instagram account",
+					"label": "Instagram",
 					"type": "string",
 					"value": "gandalfx_",
 					"note": "Enter you instagram username",
+					"note_align": "left"
+				},
+				"linkedin": {
+					"label": "LinkedIn",
+					"type": "string",
+					"value": "linkedin.com/in/ganda1fx",
+					"note": "Enter you LinkedIn profile link",
 					"note_align": "left"
 				}
 			}
