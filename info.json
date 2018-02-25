@@ -85,6 +85,37 @@
 				}
 			}
 		},
+		"Language": {
+			"icon": "info",
+			"settings": {
+				"language": {
+					"label": "Language",
+					"type": "select",
+					"options": [
+						{
+							"label": "English",
+							"value": "en"
+						},
+						{
+							"label": "French",
+							"value": "fr"
+						},
+						{
+							"label": "German",
+							"value": "de"
+						},
+						{
+							"label": "Italian",
+							"value": "it"
+						},
+						{	"label": "Japanese",
+							"value": "ja"
+						}
+					],
+					"value": "en"
+				}
+			}
+		},
 		"SEO & urls": {
 			"icon": "layout",
 			"settings": {
