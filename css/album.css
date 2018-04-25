@@ -1,20 +1,14 @@
 header {
-    position: fixed;
+    position: relative;
 } 
 
 main {
     padding: 0px 0px;
 }
 
-.hover-underline-menu {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.hover-underline-menu .menu a {
-    color: #fff;
-}
 .album-layout {
     display: flex;
+    margin: 10px;
     flex-direction: row;
 }
 
