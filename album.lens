@@ -2,35 +2,36 @@
 <koken:include file="inc/header.html" />
 <koken:asset file="css/album.css" />
 <koken:load>
-    <koken:pulse group="header" id="slide" jsvar="pulse" crop="fill" size="21:9"/>
-    <div class="container medium-text-justify">
-		<h2>{{ album.title }}</h2>
-		{{ album.description paragraphs="true" }} 
-		<koken:tags>
-			<p style="float: right">
-				<strong>{{ labels.tag.plural }}:</strong> 
-				<koken:loop separator=" ">
-					<koken:link class="label">
-						#{{ tag.title }} 
-					</koken:link>
-				</koken:loop>
-			</p>
-		</koken:tags>
-		<koken:categories>
+    <div class="album-layout">
+		<div class="container medium-text-justify">
+			<h2>{{ album.title }}</h2>
+			{{ album.description paragraphs="true" }} 
+			<koken:tags>
+				<p style="float: right">
+					<strong>{{ labels.tag.plural }}:</strong> 
+					<koken:loop separator=" ">
+						<koken:link class="label">
+							#{{ tag.title }} 
+						</koken:link>
+					</koken:loop>
+				</p>
+			</koken:tags>
+			<koken:categories>
+				<p>
+					<strong>{{ labels.category.plural }}:</strong> 
+					<koken:loop separator=" ">
+						<koken:link class="label">
+							{{ category.title }} 
+						</koken:link>
+					</koken:loop>
+				</p>
+			</koken:categories>
 			<p>
-				<strong>{{ labels.category.plural }}:</strong> 
-				<koken:loop separator=" ">
-					<koken:link class="label">
-						{{ category.title }} 
-					</koken:link>
-				</koken:loop>
+				<koken:link to="archive">
+					<koken:time />
+				</koken:link>
 			</p>
-		</koken:categories>
-		<p>
-			<koken:link to="archive">
-				<koken:time />
-			</koken:link>
-		 </p>
+		</div>
 	
 		<div id="kgrid">
 			<koken:loop>
@@ -41,7 +42,7 @@
 				</div>
 			</koken:loop>
 		</div>
-	</div>
+	
 	<koken:else>
   		<koken:note>
     		No album data found 
