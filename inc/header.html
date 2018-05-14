@@ -22,6 +22,15 @@
     <meta name="twitter:site" content="@{{ profile.twitter }}" />
     <meta name="twitter:creator" content="@{{ profile.twitter }}" />
 
+    <!-- Favicons -->
+    <link href="/storage/themes/dhyana-koken/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="/storage/themes/dhyana-koken/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <link href="/storage/themes/dhyana-koken/favicon-16x16.png" rel="icon" type="image/png" sizes="16x16">
+    <link href="/storage/themes/dhyana-koken/site.webmanifest" rel="manifest">
+    <link href="/storage/themes/dhyana-koken/safari-pinned-tab.svg" rel="mask-icon" color="#6d6d6d">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#333333">
+
 	<!-- Publishes Page Title from Settings > Site Publishing plus content titles -->
     <koken:title />
     
@@ -41,9 +50,16 @@
     <header style="z-index: 2">
         <nav class="hover-underline-menu hide-for-small-only" id="navbar" data-menu-underline-from-center>
             <koken:breadcrumbs separator="&#62" show_if_single="false" />
-            <div class="logo-container">
-                <img class="logo" src="../{{ settings.logo_src }}" />
-            </div>
+            <koken:if data="settings.show_logo" equals="true">
+                <!-- True, display this -->
+                <div class="logo-container">
+                        <img class="logo" src="../{{ settings.logo_src }}" />
+                </div>
+                <koken:else>
+                    <!-- False, show this -->
+                    <h3 class="title">{{ site.title }}</h3>
+            </koken:if>
+            
             <koken:navigation class="menu"/>
         </nav>
         <nav class="hover-underline-menu show-for-small-only" data-menu-underline-from-center>

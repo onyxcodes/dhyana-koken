@@ -2,7 +2,7 @@ body {
     display: flex;
     width: 100%;
     flex-direction: column;
-    background-repeat: repeat;
+    background-color: #f9f9f9;
 }
 
 
@@ -19,7 +19,7 @@ nav {
 }
 
 nav span {
-    flex: 1 auto;
+    flex: 1;
     color: $accent;
     line-height: 1;
     margin-bottom: 0;
@@ -37,6 +37,10 @@ nav span a:hover {
 
 nav a {
     font-variant: $title_font;
+}
+
+nav .title {
+    color: $theme_text_style;
 }
 
 nav .mobile-title {
@@ -70,6 +74,13 @@ nav .mobile-title {
 
 .hover-underline-menu:hover .menu a {
     color: $theme_text_style;
+}
+
+.hover-underline-menu .title {
+    color: $theme_text_style;
+    flex: 1;
+    margin-top: auto;
+    padding-left: 10px;
 }
 
 .hover-underline-menu .menu a {
