@@ -72,7 +72,7 @@ nav .mobile-title {
     background: $theme_style;
 }
 
-.hover-underline-menu:hover .menu a {
+.hover-underline-menu:hover .menu a, .hover-underline-menu:hover .title {
     color: $theme_text_style;
 }
 
@@ -81,6 +81,8 @@ nav .mobile-title {
     flex: 1;
     margin-top: auto;
     padding-left: 10px;
+    font-size: x-large;
+    margin-bottom: auto;
 }
 
 .hover-underline-menu .menu a {
@@ -241,7 +243,7 @@ nav .mobile-title {
 }
 
 
-/** Main contents styling **/
+/** Main content styling **/
 
 main {
     flex: 1 0 auto;
@@ -249,10 +251,18 @@ main {
     padding: 6% 0px;
 }
 
+main[data-bg=color] {
+    background-color: $theme_bg_color;
+} 
+
+main[data-bg=image] {
+    background: url($theme_bg_image);
+    background-repeat: $theme_bg_image_style;
+}
+
 div.container {
     width: 80%;
     margin: auto;
-    background: #fefefe;
     padding: 1.3rem 2rem .7rem;
     margin-top: 50px;
 }

@@ -89,8 +89,12 @@
         <a href="#" class="buttons"><i class="fi-plus"></i></a>
     
     </nav>
-
-    <main class="off-canvas-content" data-off-canvas-content> 
+    <koken:if data="settings.theme_bg" equals="color">
+        <main class="off-canvas-content" data-off-canvas-content data-bg="color" > 
+    <koken:else>
+        <main class="off-canvas-content" data-off-canvas-content data-bg="image" >
+    </koken:if>
+    
         
     
         

@@ -32,6 +32,6 @@ main {
     background: rgba(0, 0, 0, 0.2);
 }
 
-.hover-underline-menu .menu a, .hover-underline-menu .menu .title {
+.hover-underline-menu .menu a, .hover-underline-menu .title {
     color: #fff;
 }

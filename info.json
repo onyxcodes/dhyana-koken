@@ -54,7 +54,83 @@
 					"value": "#FFFFFF",
 					"note": "Affects the text color of header and footer",
 					"note_align": "left"
+				},
+				"theme_bg": {
+					"label": "Background",
+					"type": "select",
+					"options": [
+						{
+							"label": "Color",
+							"value": "color"
+						},
+						{
+							"label": "Image",
+							"value": "image"
+						},
+						{
+							"label": "Gradient",
+							"value": "gradient"
+						}
+					],
+					"value": "color"
+				},
+				"theme_bg_color": {
+					"label": "Background color",
+					"type": "color",
+					"value": "#fff",
+					"dependencies": {
+						"evaluate": "all",
+						"conditions": [
+							{
+								"option": "theme_bg",
+								"equals": "color"
+							}
+						]
+					}
+				},
+				"theme_bg_image": {
+					"label": "Image background",
+					"type": "string",
+					"value": "https://i.imgur.com/TccY6nh.jpg",
+					"dependencies": {
+						"evaluate": "all",
+						"conditions": [
+							{
+								"option": "theme_bg",
+								"equals": "image"
+							}
+						]
+					}
+				},
+				"theme_bg_image_style": {
+					"label": "Background style",
+					"type": "select",
+					"options": [
+						{
+							"label": "Cover",
+							"value": "cover"
+						},
+						{
+							"label": "Tile",
+							"value": "repeat"
+						},
+						{
+							"label": "Contain",
+							"value": "contain"
+						}
+					],
+					"value": "repeat",
+					"dependencies": {
+						"evaluate": "all",
+						"conditions": [
+							{
+								"option": "theme_bg",
+								"equals": "image"
+							}
+						]
+					}
 				}
+
 			}
 		},
 		"Layout": {
@@ -108,7 +184,8 @@
 							"label": "Italian",
 							"value": "it"
 						},
-						{	"label": "Japanese",
+						{
+							"label": "Japanese",
 							"value": "ja"
 						}
 					],
@@ -117,7 +194,7 @@
 			}
 		},
 		"SEO & urls": {
-			"icon": "layout",
+			"icon": "social",
 			"settings": {
 				"cover_image": {
 					"label": "Cover image url",
