@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <koken:include file="inc/header.html" />
 <koken:asset file="css/album.css" />
-<koken:load>
+<koken:load order_by="published_on" order_direction="desc">
     <div class="album-layout">
 		<div class="container medium-text-justify">
-			<h2 style="font-size:3vw;">{{ album.title }}</h2>
+			<h2>{{ album.title }}</h2>
 			<div class="album-desc">
 				{{ album.description paragraphs="true" }} 
 			</div>

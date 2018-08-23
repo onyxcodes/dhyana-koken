@@ -10,7 +10,22 @@ body {
 
 header {
     position: fixed;
-    width: 100%;
+    bottom: 0;
+    width: 90vw;
+    height: 55px;
+    margin: 1vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    border-radius: 25px;
+    border: 1px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,2331b2+61,6123b2+100&0+0,1+100 */
+    background: -moz-linear-gradient(-45deg,  rgba(125,185,232,0) 0%, rgba(35,49,178,0.61) 61%, rgba(97,35,178,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(125,185,232,0) 0%,rgba(35,49,178,0.61) 61%,rgba(97,35,178,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(125,185,232,0) 0%,rgba(35,49,178,0.61) 61%,rgba(97,35,178,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#6123b2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 nav {
@@ -27,7 +42,7 @@ nav span {
 }
 
 nav span a {
-    color: $theme_text_style;
+    color: white;
     text-decoration: none;
 }
 
@@ -62,8 +77,8 @@ nav .mobile-title {
 
 .hover-underline-menu {
     width: 100%;
-    /*background: rgba(0, 0, 0, 0.3);*/
-    background: $theme_style;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out;
 }
@@ -72,21 +87,22 @@ nav .mobile-title {
     background: $theme_style;
 }
 
-.hover-underline-menu:hover .menu a, .hover-underline-menu:hover .title {
+.hover-underline-menu:hover .menu a, .hover-underline-menu:hover .title, nav:hover span a {
     color: $theme_text_style;
 }
 
 .hover-underline-menu .title {
-    color: $theme_text_style;
+    color: white;
     flex: 1;
     margin-top: auto;
     padding-left: 10px;
     font-size: x-large;
+    margin-left: 1.5vw;
     margin-bottom: auto;
 }
 
 .hover-underline-menu .menu a {
-    color: $theme_text_style;
+    color: white;
     padding: 1.2rem 1.5rem;
 }
 
@@ -105,8 +121,8 @@ nav .mobile-title {
 }
 
 .hover-underline-menu .menu .underline-from-center:hover::after {
-    left: 0;
-    right: 0;
+    left: 20%;
+    right: 29%;
     transition: all 0.5s ease;
 }
 
@@ -121,7 +137,7 @@ nav .mobile-title {
 .fab {
   bottom: 0;
   position: fixed;
-  margin: 1em;
+  margin: 1vw;
   right: 0px;
   flex-direction: column;
   height: auto;
@@ -135,8 +151,8 @@ nav .mobile-title {
   background-color: $theme_style;
   font-size: 1.5rem;
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 55px;
+  height: 55px;
   margin: 20px auto 0;
   position: relative;
   -webkit-transition: all .1s ease-out;
